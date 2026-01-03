@@ -90,9 +90,13 @@ MongoDB
 Mongoose
 
 Other Tools
+
 Cloudinary (image uploads)
+
 Zod (form validation)
+
 GitHub
+
 Vercel (deployment)
 
 🔧 Setup & Configuration
@@ -101,8 +105,6 @@ Vercel (deployment)
 2. Configure environment variables for MongoDB and Cloudinary.
 3. Run the development server.
 
-The application will be available at:
-http://localhost:3000
 
 🔐 Environment Variables
 
