@@ -1,40 +1,122 @@
- HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+🛒 SSR E-Commerce Product Management Dashboard
 
-First, run the development server:
+A Server-Side Rendered (SSR) E-Commerce Product Management Dashboard built using Next.js App Router, designed for efficient product administration with secure admin access, real-time analytics, and optimized performance.
+This project enables administrators to manage products, monitor sales and stock metrics, and provides a user-facing product browsing experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📌 Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project focuses on building a server-rendered e-commerce dashboard where:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Admins can create, update, delete products
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Products are stored in MongoDB
 
-## Learn More
+Product data is server-side rendered for SEO & performance
 
-To learn more about Next.js, take a look at the following resources:
+Admin dashboard includes analytics using charts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Secure admin login restricts dashboard access
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Users can browse products and view detailed product pages
 
-## Deploy on Vercel
+The application uses Next.js App Router to combine SSR, API routes, and modern UI patterns.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✨ Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔐 Admin Dashboard
 
-# SSR-ECOMMERCE
- 1ef8e847f5bddaddb4e1a2f560a23b97b396ea44
+Secure admin login (dummy credentials)
+
+Product CRUD operations
+
+Image upload support
+
+Category-based product management
+
+Real-time stock & sales updates
+
+Analytics dashboard with charts
+
+🛍 User Features
+
+Product listing page
+
+Search and category filter
+
+Product detail page
+
+Buy Now functionality (updates stock & sales)
+
+Responsive UI
+
+📊 Analytics
+
+Stock distribution chart
+
+Sales distribution chart
+
+Price range analytics
+
+Total products, stock & sales summary
+
+⚡ Performance & SEO
+
+Server-Side Rendering (SSR) using Next.js
+
+Optimized MongoDB queries
+
+Fast client updates using SWR
+
+🛠 Tech Stack
+
+Frontend
+
+Next.js 14 (App Router)
+
+React
+
+Tailwind CSS
+
+SWR (data fetching & revalidation)
+
+Recharts (analytics & charts)
+
+Backend
+Next.js API Routes
+
+MongoDB
+
+Mongoose
+
+Other Tools
+
+Cloudinary (image uploads)
+
+Zod (form validation)
+
+GitHub
+
+Vercel (deployment)
+
+🔧 Setup & Configuration
+
+1. Clone the repository and install dependencies.
+2. Configure environment variables for MongoDB and Cloudinary.
+3. Run the development server.
+
+
+🔐 Environment Variables
+
+Create a `.env.local` file and configure the following variables:
+
+- MONGODB_URI
+- CLOUDINARY_CLOUD_NAME
+- CLOUDINARY_API_KEY
+- CLOUDINARY_API_SECRET
+- ADMIN_EMAIL
+- ADMIN_PASSWORD
+
+- ## DUMMY credentials
+- ADMIN_EMAIL = admin@ex.com
+- ADMIN_PASSWORD = admin@123!!
