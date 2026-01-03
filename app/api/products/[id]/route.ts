@@ -27,4 +27,6 @@ export async function GET(
     console.error(error);
     return NextResponse.json(null, { status: 500 });
   }
-}
+  
+} 
+
