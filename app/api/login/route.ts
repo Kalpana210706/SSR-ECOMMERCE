@@ -8,11 +8,18 @@ export async function POST(req: Request) {
     const res = NextResponse.json({ success: true });
 
     
-    res.headers.append(
-      "Set-Cookie",
-      "admin=true; Path=/; HttpOnly; SameSite=Lax"
-    );
-
+    // res.headers.append(
+    //   "Set-Cookie",
+    //   "admin=true; Path=/; HttpOnly; SameSite=Lax"
+    // );
+    res.cookies.set({
+      name: "admin",
+      value: "true",
+      httpOnly: true,
+      path: "/",
+      sameSite: "lax",
+    })
+    
     return res;
   }
 

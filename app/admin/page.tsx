@@ -182,10 +182,24 @@ export default function AdminPage() {
 };
 
   /* ================= DELETE ================= */
-  async function deleteProduct(id: string) {
-    await fetch(`/api/products/${id}`, { method: "DELETE" });
-    loadProducts();
+  // async function deleteProduct(id: string) {
+  //   await fetch(`/api/products/${id}`, { method: "DELETE" });
+  //   loadProducts();
+  // }
+async function deleteProduct(id: string) {
+  const confirmDelete = confirm("Are you sure you want to delete this product?");
+  if (!confirmDelete) return;
+
+  const res = await fetch(`/api/products/${id}`, {
+    method: "DELETE",
+  });
+
+  if (res.ok) {
+    loadProducts(); // refresh UI
+  } else {
+    alert("Failed to delete product");
   }
+}
 
   /* ================= ANALYTICS ================= */
 
@@ -381,7 +395,7 @@ export default function AdminPage() {
 </p>
       <div className="flex gap-2 mt-3">
         {/* UPDATE */}
-        <button
+        <button type="button"
           className="flex-1 bg-yellow-500 text-white rounded py-1"
           onClick={() => {
             setEditingId(p._id);
@@ -398,7 +412,7 @@ export default function AdminPage() {
         </button>
 
         {/* DELETE */}
-        <button
+        <button type="button"
           className="flex-1 bg-red-500 text-white rounded py-1"
           onClick={() => deleteProduct(p._id)}
         >
