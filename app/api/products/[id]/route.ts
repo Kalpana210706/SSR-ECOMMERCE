@@ -1,4 +1,3 @@
-
 import { NextResponse } from "next/server";
 import connectDB from "@/lib/mongodb";
 import Product from "@/models/Product";
@@ -9,7 +8,7 @@ export async function GET(
   context: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = await context.params; // 🔥 THIS IS THE FIX
+    const { id } = await context.params; 
 
     await connectDB();
 
