@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import connectDB from "@/lib/mongodb";
 import Product from "@/models/Product";
 
-// CREATE product
+/* ================= CREATE PRODUCT ================= */
 export async function POST(req: Request) {
   try {
     await connectDB();
@@ -18,7 +18,7 @@ export async function POST(req: Request) {
   }
 }
 
-// GET products
+/* ================= GET ALL PRODUCTS ================= */
 export async function GET() {
   try {
     await connectDB();
@@ -32,7 +32,37 @@ export async function GET() {
   }
 }
 
-// DELETE product
+/* ================= UPDATE PRODUCT ================= */
+export async function PUT(req: Request) {
+  try {
+    await connectDB();
+    const body = await req.json();
+
+    const { _id, ...updateData } = body;
+
+    if (!_id) {
+      return NextResponse.json(
+        { error: "Product ID required" },
+        { status: 400 }
+      );
+    }
+
+    const updatedProduct = await Product.findByIdAndUpdate(
+      _id,
+      updateData,
+      { new: true }
+    );
+
+    return NextResponse.json(updatedProduct);
+  } catch {
+    return NextResponse.json(
+      { error: "Failed to update product" },
+      { status: 500 }
+    );
+  }
+}
+
+/* ================= DELETE PRODUCT ================= */
 export async function DELETE(req: Request) {
   try {
     await connectDB();
@@ -46,5 +76,3 @@ export async function DELETE(req: Request) {
     );
   }
 }
-
-

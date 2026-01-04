@@ -12,6 +12,9 @@ import {
 } from "recharts";
 
 import { useRouter } from "next/navigation";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import { set } from "mongoose";
 
 
 /* ================= ZOD ================= */
@@ -40,7 +43,7 @@ type ProductType = {
   description: string;
   image: string;
 };
-
+// export const dynamic = "force-dynamic";
 
 export default function AdminPage() {
   //   const router = useRouter();
@@ -51,6 +54,14 @@ export default function AdminPage() {
   //     router.push("/login");
   //   }
   // }, []);
+
+  // const cookieStore =  await cookies();
+  // const admin = cookieStore.get("admin")?.value;
+  
+  // if(admin!== "true") {
+  //   redirect("/login");
+  // }
+
 
  
 
@@ -73,7 +84,7 @@ export default function AdminPage() {
   const [image, setImage] = useState<File | null>(null);
 
   const [loading, setLoading] = useState(false);
-
+  const [existingImage, setExistingImage] = useState("");
   /* ================= LOAD PRODUCTS (FIXED) ================= */
   async function loadProducts() {
     const res = await fetch("/api/products");
@@ -405,6 +416,7 @@ async function deleteProduct(id: string) {
             setSales(String(p.sales));
             setCategory(p.category);
             setDescription(p.description);
+            setExistingImage(p.image);
             setStep(1); // go back to step 1 for edit
           }}
         >
