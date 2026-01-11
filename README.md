@@ -1,10 +1,9 @@
-
-🛒 SSR E-Commerce Product Management Dashboard
+## SSR E-Commerce Product Management Dashboard
 
 A Server-Side Rendered (SSR) E-Commerce Product Management Dashboard built using Next.js App Router, designed for efficient product administration with secure admin access, real-time analytics, and optimized performance.
 This project enables administrators to manage products, monitor sales and stock metrics, and provides a user-facing product browsing experience.
 
-📌 Project Overview
+## Project Overview
 
 This project focuses on building a server-rendered e-commerce dashboard where:
 
@@ -22,9 +21,9 @@ Users can browse products and view detailed product pages
 
 The application uses Next.js App Router to combine SSR, API routes, and modern UI patterns.
 
-✨ Key Features
+## Key Features
 
-🔐 Admin Dashboard
+ Admin Dashboard
 
 Secure admin login (dummy credentials)
 
@@ -38,7 +37,7 @@ Real-time stock & sales updates
 
 Analytics dashboard with charts
 
-🛍 User Features
+## User Features
 
 Product listing page
 
@@ -50,7 +49,7 @@ Buy Now functionality (updates stock & sales)
 
 Responsive UI
 
-📊 Analytics
+## Analytics
 
 Stock distribution chart
 
@@ -60,7 +59,7 @@ Price range analytics
 
 Total products, stock & sales summary
 
-⚡ Performance & SEO
+ ## Performance & SEO
 
 Server-Side Rendering (SSR) using Next.js
 
@@ -68,7 +67,7 @@ Optimized MongoDB queries
 
 Fast client updates using SWR
 
-🛠 Tech Stack
+## Tech Stack
 
 Frontend
 
@@ -99,14 +98,14 @@ GitHub
 
 Vercel (deployment)
 
-🔧 Setup & Configuration
+## Setup & Configuration
 
 1. Clone the repository and install dependencies.
 2. Configure environment variables for MongoDB and Cloudinary.
 3. Run the development server.
 
 
-🔐 Environment Variables
+## Environment Variables
 
 Create a `.env.local` file and configure the following variables:
 
