@@ -1,10 +1,12 @@
 ## SSR E-Commerce Product Management Dashboard
-##Updates During Nebula
+## Updates During Nebula
 
 -Improved project DOcumentation
 -Added detailed setup instructions
 -Improved project structure explanation
 -Updated deployment information
+## Dashboard image
+<img width="1731" height="902" alt="image" src="https://github.com/user-attachments/assets/894d7535-04cd-47f1-889f-6ded6832a4d8" />
 
 A Server-Side Rendered (SSR) E-Commerce Product Management Dashboard built using Next.js App Router, designed for efficient product administration with secure admin access, real-time analytics, and optimized performance.
 This project enables administrators to manage products, monitor sales and stock metrics, and provides a user-facing product browsing experience.
