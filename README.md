@@ -5,6 +5,8 @@
 -Added detailed setup instructions
 -Improved project structure explanation
 -Updated deployment information
+
+
 ## Dashboard image
 <img width="1731" height="902" alt="image" src="https://github.com/user-attachments/assets/894d7535-04cd-47f1-889f-6ded6832a4d8" />
 
