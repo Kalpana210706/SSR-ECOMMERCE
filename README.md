@@ -1,10 +1,4 @@
 ## SSR E-Commerce Product Management Dashboard
-## Updates During Nebula
-
--Improved project DOcumentation
--Added detailed setup instructions
--Improved project structure explanation
--Updated deployment information
 
 
 ## Dashboard image
